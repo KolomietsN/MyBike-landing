@@ -1,34 +1,35 @@
 .button {
-  color: #000;
-  transition: color 250ms;
-  cursor: pointer;
-
-  grid-column: 1 / -1;
-
-  width: 100%;
+  color: $background-color;
+  background-color: $main-text-color;
   height: 56px;
-  border: none;
-
-  font-family: "Poppins", sans-serif;
+  border-radius: 40px;
+  border: 0;
   font-weight: 700;
   line-height: 27px;
+  text-decoration: none;
+  width: 182px;
+  padding-inline: 48px;
+  margin-inline: auto;
 
-  border-radius: 40px;
-  background-color: #fff;
-
-  @include onTablet {
-    grid-column: 2 / 6;
-  }
-  @include onDesktop {
-    grid-column: 5 / 9;
-  }
+  display: flex;
+  justify-content: center;
+  align-items: center;
 
   &:hover {
-    color: #c0c0c0;
-    box-shadow: 1px 4px 16px rgba(232, 232, 240, 0.4);
+    box-shadow: 1px 4px 16px 0 rgba(232, 232, 240, 0.4);
   }
 
   &:active {
-    box-shadow: 1px 4px 16px rgba(232, 232, 240, 0.64);
+    box-shadow: 1px 4px 16px 0 rgba(232, 232, 240, 0.64);
+  }
+
+  &--details {
+    @include onTablet {
+      width: 296px;
+    }
+
+    @include onDesktop {
+      width: 228px;
+    }
   }
 }

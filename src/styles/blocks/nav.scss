@@ -1,33 +1,30 @@
 .nav {
   &__list {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+
     display: flex;
     flex-direction: column;
     gap: 32px;
-
-    margin: 0;
-    padding: 0;
-
-    list-style: none;
   }
 
   &__link {
     position: relative;
-
+    color: #1d1d1d;
+    text-decoration: none;
     font-size: 22px;
     line-height: 22px;
-
-    text-decoration: none;
-    color: $black;
+    letter-spacing: 2px;
 
     &::after {
-      content: "";
-
+      content: " ";
       position: absolute;
       bottom: -8px;
-
       display: block;
+      height: 1px;
       width: 100%;
-      border: 1px solid $black;
+      background-color: #1d1d1d;
 
       transition: transform 0.3s;
       transform: scale(0);
